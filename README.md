@@ -1,14 +1,9 @@
- ⛔️  NO LONGER MAINTAINED ⛔️ 
-
-This plugin was originally built back in 2013 to provide an easy way to open files in Cordova applications. Since 2018 the plugin has not been actively maintained, with only the occaisional release to support updates from the community. Due to signficant changes in the way that Android handles permissions from version 11 onwards, this plugin does not work with Android 11 or later and would require significant changes to make this happen. 
-
-If someone would like to take on this work and maintain the plugin moving forward please get in touch.
 
 ----------
 
 # A File Opener Plugin for Cordova
 
-[![Latest Stable Version](https://img.shields.io/npm/v/cordova-plugin-file-opener2.svg)](https://www.npmjs.com/package/cordova-plugin-file-opener2) [![Total Downloads](https://img.shields.io/npm/dt/cordova-plugin-file-opener2.svg)](https://npm-stat.com/charts.html?package=cordova-plugin-file-opener2)
+[![Latest Stable Version](https://img.shields.io/npm/v/@herdwatch/cordova-plugin-file-opener.svg)](https://www.npmjs.com/package/@herdwatch/cordova-plugin-file-opener2) [![Total Downloads](https://img.shields.io/npm/dt/@herdwatch/cordova-plugin-file-opener2.svg)](https://npm-stat.com/charts.html?package=@herdwatch/cordova-plugin-file-opener2)
 
 This plugin will open a file on your device file system with its default application.
 
@@ -26,7 +21,7 @@ cordova.plugins.fileOpener2.open(
 ## Installation
 
 ```shell
-$ cordova plugin add cordova-plugin-file-opener2
+$ cordova plugin add @hedwatch/cordova-plugin-file-opener2
 ```
 
 ## Requirements
@@ -36,13 +31,6 @@ The following platforms and versions are supported by the latest release:
 - Android 5.1+ / iOS 9+ / Windows / Electron
 - Cordova CLI 7.0 or higher
 
-Cordova CLI 6.0 is supported by 2.0.19, but there are a number of issues, particularly with Android builds (see [232](https://github.com/pwlin/cordova-plugin-file-opener2/issues/232) [203](https://github.com/pwlin/cordova-plugin-file-opener2/issues/203) [207](https://github.com/pwlin/cordova-plugin-file-opener2/issues/207)). Using the [cordova-android-support-gradle-release](https://github.com/dpa99c/cordova-android-support-gradle-release) plugin may help.
-
-### Support for Android 11 and later 
-There have been [reports](https://github.com/pwlin/cordova-plugin-file-opener2/issues/310) of issues using this plugin with Android 11 and later. 
-
-### Edit support 
-The plugin currently does *not* support the editing of files on Android. It may support editing on iOS, but this has not been tested. 
 
 ## fileOpener2.open(filePath, mimeType, options)
 
@@ -154,7 +142,6 @@ It is not always possible to open a file from the SD Card using this plugin on A
 
 - For properly opening _any_ file, you must already have a suitable reader for that particular file type installed on your device. Otherwise this will not work.
 
-- [It is reported](https://github.com/pwlin/cordova-plugin-file-opener2/issues/2#issuecomment-41295793) that in iOS, you might need to remove `<preference name="iosPersistentFileLocation" value="Library" />` from your `config.xml`
 
 - If you are wondering what MIME-type should you pass as the second argument to `open` function, [here is a list of all known MIME-types](http://svn.apache.org/viewvc/httpd/httpd/trunk/docs/conf/mime.types?view=co)
 
